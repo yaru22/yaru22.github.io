@@ -1,1 +1,22 @@
-Hello World
+---
+layout: default
+title: Life Without Regrets - Brian Park
+---
+
+<div class="about">
+  Hi, I'm Brian Park. I'm an entrepreneur, software engineer and snowboarder living in Toronto, Canada.<br/><br/>
+  I studied software engineering at University of Waterloo and graduated
+  in 2010. I worked at Google (Google Docs team) for a while before taking
+  the entrepreneurial journey.<br/><br/>
+  Feel free to contact me via various social networks on the left side.
+</div>
+
+<h2>Recent Posts</h2>
+<ul class="posts">
+  {% for post in site.posts limit:5 %}
+    <li class="post">
+      <a href="{{ post.url }}"><h3 class="title">{{ post.title }}</h3></a>
+      <span>{{ post.meta-description }}</span>
+    </li>
+  {% endfor %}
+</ul>

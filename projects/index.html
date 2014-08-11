@@ -1,0 +1,13 @@
+---
+layout: default
+title: Projects - Brian Park
+---
+
+<ul class="posts">
+  {% for project in site.categories.projects %}
+    <li class="post">
+      <a href="{{ project.url }}"><h3 class="title">{{ project.title }}</h3></a>
+      <span>{{ project.meta-description }}</span>
+    </li>
+  {% endfor %}
+</ul>

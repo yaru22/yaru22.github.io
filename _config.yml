@@ -1,0 +1,24 @@
+exclude: [
+  'Gemfile',
+  'Gemfile.lock',
+  'less',
+  'README.md',
+  'run.sh',
+  'shflags',
+  '*.sublime-*',
+]
+highlighter: pygments
+kramdown:
+  input: GFM
+markdown: redcarpet
+redcarpet:
+  extensions: [
+    'autolink',
+    'fenced_code_blocks',
+    'no_intra_emphasis',
+    'strikethrough',
+    'superscript',
+    'with_toc_data',
+  ]
+name: Life Without Regrets
+permalink: /:categories/:title

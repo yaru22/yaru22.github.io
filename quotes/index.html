@@ -1,0 +1,16 @@
+---
+layout: default
+title: Favorite Quotes - Brian Park
+---
+
+<ul class="quotes">
+  {% for quote in site.data.quotes %}
+  <li class="quote">
+    <blockquote class="{% cycle '', 'blockquote-reverse' %}">
+      <i class="fa fa-2x {% cycle 'fa-quote-right pull-right', 'fa-quote-left pull-left' %}"></i>
+      <p>{{ quote.msg }}</p>
+      <footer>{{ quote.name }}</footer>
+    </blockquote>
+  </li>
+  {% endfor %}
+</ul>
