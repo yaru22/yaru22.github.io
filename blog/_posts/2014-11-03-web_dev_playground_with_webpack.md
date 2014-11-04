@@ -47,6 +47,7 @@ module.exports = {
 The simple configuration above is mostly self-explanatory. The webpack's entry point is `main.js` and it's going to bundle all the files following `require()` calls and outputs it to `bundle.js`. For loading css files, we specify it to load it first using `css-loader` and then `style-loader` (i.e. `'style!css'`; read it right-to-left).
 
 Let's write a simple hello world in `main.js`.
+
 ```js
 // main.js
 console.log('hello world');
@@ -80,11 +81,13 @@ Do you see 'hello world' in the console? Great!
 
 ### Iterating
 webpack is a bundler but with our simple hello world, we couldn't realize the true power of webpack yet. Let's create another file `name.js`
+
 ```js
 // name.js
 module.exports = 'brian park';
 ```
 And inside `main.js`, require `name.js`.
+
 ```js
 // main.js
 var name = require('./name');
@@ -95,6 +98,7 @@ Save this file and watch the page you opened before reload automatically and che
 
 ## Loading CSS
 Let's spice it up a bit and load CSS using webpack, too. Let's create `main.css`.
+
 ```css
 /* main.css */
 html, body {
@@ -103,6 +107,7 @@ html, body {
 }
 ```
 How do we load this CSS now? Simple, just `require()` it.
+
 ```js
 // main.js
 require('./main.css');
